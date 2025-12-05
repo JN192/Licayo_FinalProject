@@ -36,7 +36,6 @@ Partial Class Form1
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnLoad = New System.Windows.Forms.Button()
         Me.btnRead = New System.Windows.Forms.Button()
         Me.btnConnect = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,15 +156,6 @@ Partial Class Form1
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btnLoad
-        '
-        Me.btnLoad.Location = New System.Drawing.Point(202, 436)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.Size = New System.Drawing.Size(75, 23)
-        Me.btnLoad.TabIndex = 14
-        Me.btnLoad.Text = "Load"
-        Me.btnLoad.UseVisualStyleBackColor = True
-        '
         'btnRead
         '
         Me.btnRead.Location = New System.Drawing.Point(98, 244)
@@ -188,10 +178,10 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 567)
         Me.Controls.Add(Me.btnConnect)
         Me.Controls.Add(Me.btnRead)
-        Me.Controls.Add(Me.btnLoad)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAdd)
@@ -228,7 +218,6 @@ Partial Class Form1
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnLoad As Button
     Friend WithEvents btnRead As Button
     Friend WithEvents btnConnect As Button
 End Class
