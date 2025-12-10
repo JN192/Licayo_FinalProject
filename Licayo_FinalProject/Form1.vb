@@ -8,6 +8,7 @@ Public Class Form1
 
     Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
 
+        'Jermaine Licayo
         conn = New MySqlConnection
         conn.ConnectionString = "server=localhost; userid=root; password=admin; database=employee_db;"
 
