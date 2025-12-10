@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.txtDepartment = New System.Windows.Forms.TextBox()
         Me.txtSalary = New System.Windows.Forms.TextBox()
@@ -36,7 +37,6 @@ Partial Class Form1
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
         Me.btnLoad = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -46,7 +46,7 @@ Partial Class Form1
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(131, 52)
+        Me.txtId.Location = New System.Drawing.Point(45, 51)
         Me.txtId.Margin = New System.Windows.Forms.Padding(4)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(132, 22)
@@ -54,7 +54,7 @@ Partial Class Form1
         '
         'txtDepartment
         '
-        Me.txtDepartment.Location = New System.Drawing.Point(131, 244)
+        Me.txtDepartment.Location = New System.Drawing.Point(45, 243)
         Me.txtDepartment.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDepartment.Name = "txtDepartment"
         Me.txtDepartment.Size = New System.Drawing.Size(132, 22)
@@ -62,7 +62,7 @@ Partial Class Form1
         '
         'txtSalary
         '
-        Me.txtSalary.Location = New System.Drawing.Point(131, 196)
+        Me.txtSalary.Location = New System.Drawing.Point(45, 195)
         Me.txtSalary.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSalary.Name = "txtSalary"
         Me.txtSalary.Size = New System.Drawing.Size(132, 22)
@@ -70,7 +70,7 @@ Partial Class Form1
         '
         'txtPosition
         '
-        Me.txtPosition.Location = New System.Drawing.Point(131, 148)
+        Me.txtPosition.Location = New System.Drawing.Point(45, 147)
         Me.txtPosition.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(132, 22)
@@ -78,7 +78,7 @@ Partial Class Form1
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(131, 100)
+        Me.txtName.Location = New System.Drawing.Point(45, 99)
         Me.txtName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(132, 22)
@@ -87,7 +87,7 @@ Partial Class Form1
         'lblId
         '
         Me.lblId.AutoSize = True
-        Me.lblId.Location = New System.Drawing.Point(127, 32)
+        Me.lblId.Location = New System.Drawing.Point(41, 31)
         Me.lblId.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblId.Name = "lblId"
         Me.lblId.Size = New System.Drawing.Size(18, 16)
@@ -97,7 +97,7 @@ Partial Class Form1
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(127, 80)
+        Me.lblName.Location = New System.Drawing.Point(41, 79)
         Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(44, 16)
@@ -107,7 +107,7 @@ Partial Class Form1
         'lblPosition
         '
         Me.lblPosition.AutoSize = True
-        Me.lblPosition.Location = New System.Drawing.Point(127, 128)
+        Me.lblPosition.Location = New System.Drawing.Point(41, 127)
         Me.lblPosition.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPosition.Name = "lblPosition"
         Me.lblPosition.Size = New System.Drawing.Size(55, 16)
@@ -117,7 +117,7 @@ Partial Class Form1
         'lblSalary
         '
         Me.lblSalary.AutoSize = True
-        Me.lblSalary.Location = New System.Drawing.Point(127, 176)
+        Me.lblSalary.Location = New System.Drawing.Point(41, 175)
         Me.lblSalary.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSalary.Name = "lblSalary"
         Me.lblSalary.Size = New System.Drawing.Size(46, 16)
@@ -127,7 +127,7 @@ Partial Class Form1
         'lblDepartment
         '
         Me.lblDepartment.AutoSize = True
-        Me.lblDepartment.Location = New System.Drawing.Point(127, 224)
+        Me.lblDepartment.Location = New System.Drawing.Point(41, 223)
         Me.lblDepartment.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDepartment.Name = "lblDepartment"
         Me.lblDepartment.Size = New System.Drawing.Size(77, 16)
@@ -136,17 +136,18 @@ Partial Class Form1
         '
         'dgvEmployees
         '
+        Me.dgvEmployees.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmployees.Location = New System.Drawing.Point(307, 52)
+        Me.dgvEmployees.Location = New System.Drawing.Point(221, 51)
         Me.dgvEmployees.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvEmployees.Name = "dgvEmployees"
         Me.dgvEmployees.RowHeadersWidth = 51
-        Me.dgvEmployees.Size = New System.Drawing.Size(476, 193)
+        Me.dgvEmployees.Size = New System.Drawing.Size(487, 193)
         Me.dgvEmployees.TabIndex = 10
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(339, 253)
+        Me.btnAdd.Location = New System.Drawing.Point(253, 252)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(100, 28)
@@ -156,7 +157,7 @@ Partial Class Form1
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(367, 302)
+        Me.btnUpdate.Location = New System.Drawing.Point(577, 252)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(100, 28)
@@ -166,7 +167,7 @@ Partial Class Form1
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(496, 302)
+        Me.btnDelete.Location = New System.Drawing.Point(469, 252)
         Me.btnDelete.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(100, 28)
@@ -174,18 +175,9 @@ Partial Class Form1
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btnClear
-        '
-        Me.btnClear.Location = New System.Drawing.Point(554, 253)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(99, 33)
-        Me.btnClear.TabIndex = 17
-        Me.btnClear.Text = "Clear"
-        Me.btnClear.UseVisualStyleBackColor = True
-        '
         'btnLoad
         '
-        Me.btnLoad.Location = New System.Drawing.Point(447, 253)
+        Me.btnLoad.Location = New System.Drawing.Point(361, 252)
         Me.btnLoad.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLoad.Name = "btnLoad"
         Me.btnLoad.Size = New System.Drawing.Size(100, 28)
@@ -195,7 +187,7 @@ Partial Class Form1
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(130, 302)
+        Me.txtSearch.Location = New System.Drawing.Point(44, 301)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(133, 22)
@@ -204,7 +196,7 @@ Partial Class Form1
         'lblSearch
         '
         Me.lblSearch.AutoSize = True
-        Me.lblSearch.Location = New System.Drawing.Point(135, 282)
+        Me.lblSearch.Location = New System.Drawing.Point(49, 281)
         Me.lblSearch.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSearch.Name = "lblSearch"
         Me.lblSearch.Size = New System.Drawing.Size(50, 16)
@@ -213,7 +205,7 @@ Partial Class Form1
         '
         'btnConnect
         '
-        Me.btnConnect.Location = New System.Drawing.Point(130, 347)
+        Me.btnConnect.Location = New System.Drawing.Point(44, 346)
         Me.btnConnect.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConnect.Name = "btnConnect"
         Me.btnConnect.Size = New System.Drawing.Size(133, 67)
@@ -226,12 +218,13 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(927, 459)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(745, 434)
         Me.Controls.Add(Me.btnConnect)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.lblSearch)
         Me.Controls.Add(Me.btnLoad)
-        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAdd)
@@ -269,7 +262,6 @@ Partial Class Form1
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnClear As Button
     Friend WithEvents btnLoad As Button
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents lblSearch As Label

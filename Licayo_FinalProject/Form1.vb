@@ -25,7 +25,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         Dim query As String = "INSERT INTO `employee_db`.`employees` (`id`, `name`, `position`, `salary`, `department`) VALUES (@id, @name, @position, @salary, @department);"
         Try
